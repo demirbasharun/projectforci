@@ -18,6 +18,10 @@ jobs:
           command: |
             . venv/bin/activate
             python3 manage.py test
+      -run:
+        name: Upgrade pip
+        command : |
+          pip install --upgrade pip
       - store_artifacts:
           path: test-reports/
           destination: python_app
