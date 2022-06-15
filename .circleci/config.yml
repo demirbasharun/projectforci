@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Upgrade pip
-        command : pip install --upgrade pip
+          name: Upgrade pip
+          command : pip install --upgrade pip
       - run:
           command: |
             python3 -m venv venv
