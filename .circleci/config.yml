@@ -29,13 +29,11 @@ jobs:
     # CircleCI will report the results back to your VCS provider.
     steps:
       - checkout
-      -run:
+      - run:
         command: |
           python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-
-
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
